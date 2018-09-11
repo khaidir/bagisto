@@ -981,6 +981,63 @@ section.slider-block {
         }
     }
     //edit form ends
+
+    //Review Page
+    .review-form-content {
+        margin-left: 5.5%;
+        margin-top: 1%;
+        width: 100%;
+        .review-text {
+            margin-bottom: 2%;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 24px;
+        }
+        .review-product {
+            display: flex;
+            height: 135px;
+            .product-image{
+                width: 20%;
+                .productimg{
+                    height: 140px;
+                    width: 130px;
+                    padding:15px;
+                }
+            }
+            .product-detail{
+                width: 80%;
+                .title{
+                    font-family: Montserrat-Regular;
+                    font-size: 16px;
+                    color: #0031F0;
+                    letter-spacing: -0.26px;
+                    margin-left: 20px;
+                    position: absolute;
+                }
+                .rating{
+                    margin-left: 20px;
+                    line-height: 0.0;
+                    margin-top:38px;
+                    .rate{
+                        width: 18px;
+                        height: 18px;
+                    }
+                }
+                .description{
+                    font-family: Montserrat-Regular;
+                    font-size: 16px;
+                    color: #5E5E5E;
+                    letter-spacing: -0.12px;
+                    margin-left: 20px;
+                }
+                .action{
+                    float: right;
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+        //Review page end Here
 }
 //account ends here
 //customers page css ends here

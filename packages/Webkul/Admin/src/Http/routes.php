@@ -314,5 +314,20 @@ Route::group(['middleware' => ['web']], function () {
                 'redirect' => 'admin::sliders.index'
             ])->name('admin.sliders.store');
         });
+
+        /////Mail Template
+        Route::get('/mail/forget_password', function () {
+            return view('admin::mail/admin/forget_password');
+        });
+        Route::get('/mail/new_account', function () {
+            return view('admin::mail/customer/new_account');
+        });
+        Route::get('/mail/order', function () {
+            return view('admin::mail/customer/order_confirmation');
+        });
+        Route::get('/mail/newsletter', function () {
+            return view('admin::mail/customer/newsletter_signup');
+        });
+        Route::post('/send', 'EmailController@send');
     });
 });

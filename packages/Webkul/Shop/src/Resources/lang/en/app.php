@@ -29,6 +29,18 @@ return [
             'password' => 'Password',
             'forgot_pass' => 'Forgot Password?',
             'button_title' => 'Sign In'
+        ],
+        'forgot-password-form' =>[
+            'title' => 'Forgot Password',
+            'email' => 'Email',
+            'button_title'=>'Submit'
+        ],
+        'password-reset-form' =>[
+            'title' => 'Reset Password',
+            'email' => 'Registered Email',
+            'password' => 'Password',
+            'confirm_pass' => 'Confirm Password',
+            'button_title' => 'Submit'
         ]
     ],
 

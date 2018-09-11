@@ -21,4 +21,9 @@ class ProductReviewRepository extends Repository
     {
         return 'Webkul\Product\Models\ProductReview';
     }
+
+    function index($id){
+        return $this->model->where('customer_id' , $id)->get();
+    }
+    
 }

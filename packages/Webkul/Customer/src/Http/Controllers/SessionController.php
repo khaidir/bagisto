@@ -50,6 +50,7 @@ class SessionController extends Controller
         return redirect()->route($this->_config['redirect']);
     }
 
+
     public function destroy($id)
     {
         auth()->guard('customer')->logout();

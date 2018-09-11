@@ -35,12 +35,16 @@
             </div>
             <div class="list-container">
                 <span class="list-heading">Subscribe Newsletter</span>
-                <div class="form-container">
-                    <div class="control-group">
-                        <input type="text" class="control subscribe-field" placeholder="Email Address"><br/>
-                        <button class="btn btn-md btn-primary">Subscribe</button>
+                <form method="POST" action="{{ route('subscribewithus') }}" name="">
+                    <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
+                    <div class="form-container">
+                        <div class="control-group" :class="[errors.has('email') ? 'has-error' : '']">
+                            <input type="text" class="control subscribe-field" name="email" v-validate="'required|email'" placeholder="{{ __('shop::app.footer.subscription-field') }}">
+                            <span class="control-error" v-if="errors.has('email')">@{{ errors.first('email') }}</span>
+                            <button class="btn btn-md btn-primary">Subscribe</button>
+                        </div>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>
