@@ -65,5 +65,8 @@ return [
         'reviews-title' => 'Ratings & Reviews',
         'write-review-btn' => 'Write Review',
         'choose-option' => 'Choose an option'
+    ],
+    'footer' => [
+        'subscription-field' => 'Email Address'
     ]
 ];

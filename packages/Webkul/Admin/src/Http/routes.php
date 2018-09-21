@@ -329,5 +329,13 @@ Route::group(['middleware' => ['web']], function () {
             return view('admin::mail/customer/newsletter_signup');
         });
         Route::post('/send', 'EmailController@send');
+
+        Route::get('/unauthorized',function (){
+            return view('admin::users/unauthorized');
+        })->name('unauthorized');
+
+        //up-selling products route
+        Route::get('/products/edit/upsellingproduct','Webkul\Product\Http\Controllers\ProductController@upsellingproduct')->name('admin.catalog.products.upsellingproduct');
+
     });
 });

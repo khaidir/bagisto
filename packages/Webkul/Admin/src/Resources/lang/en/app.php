@@ -94,7 +94,13 @@ return [
             'disabled' => 'Disabled',
             'add-variant-title' => 'Add Variant',
             'variant-already-exist-message' => 'Variant with same attribute options already exists.',
-            'add-image-btn-title' => 'Add Image'
+            'add-image-btn-title' => 'Add Image',
+            'add-up-selling' => 'Up selling',
+            'add-up-selling-placeholder' => 'Start typing product name',
+            'add-cross-selling' => 'Cross selling',
+            'add-cross-selling-placeholder' => 'Start typing product name',
+            'add-up-selling-btn-title' => 'Add Product',
+            'search' => 'Start typing product name',
         ],
         'attributes' => [
             'add-title' => 'Add Attribute',

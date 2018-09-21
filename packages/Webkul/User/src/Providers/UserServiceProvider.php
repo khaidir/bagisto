@@ -20,6 +20,8 @@ class UserServiceProvider extends ServiceProvider
      */
     public function boot(Router $router)
     {
+        include __DIR__ . '/../Http/helpers.php';
+
         $router->aliasMiddleware('admin', RedirectIfNotAdmin::class);
 
         $this->loadMigrationsFrom(__DIR__ . '/../Database/Migrations');

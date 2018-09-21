@@ -10,6 +10,7 @@ use Webkul\Attribute\Repositories\AttributeFamilyRepository as AttributeFamily;
 use Webkul\Category\Repositories\CategoryRepository as Category;
 use Webkul\Inventory\Repositories\InventorySourceRepository as InventorySource;
 
+
 /**
  * Product controller
  *
@@ -52,6 +53,13 @@ class ProductController extends Controller
      * @var array
      */
     protected $product;
+
+    /**
+     * All Product Repository object
+     *
+     * @var array
+     */
+    protected $allproduct;
 
     /**
      * Create a new controller instance.
@@ -149,7 +157,9 @@ class ProductController extends Controller
 
         $inventorySources = $this->inventorySource->all();
 
-        return view($this->_config['view'], compact('product', 'categories', 'inventorySources'));
+        $allProducts = $this->product->all();
+
+        return view($this->_config['view'], compact('product', 'categories', 'inventorySources', 'allProducts'));
     }
 
     /**
@@ -168,6 +178,18 @@ class ProductController extends Controller
         return redirect()->route($this->_config['redirect']);
     }
 
+
+    /**
+     * List of all Product for Upsellling
+     *
+     *
+    */
+    public function upsellingproduct(){
+        $query =request()->input('query');
+        $allProducts = $this->product->findAndFilter($query);
+        return response()->json($allProducts);
+    }
+
     /**
      * Remove the specified resource from storage.
      *
@@ -178,4 +200,6 @@ class ProductController extends Controller
     {
         //
     }
+
+
 }

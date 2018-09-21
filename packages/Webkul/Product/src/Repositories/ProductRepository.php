@@ -1,7 +1,7 @@
-<?php 
+<?php
 
 namespace Webkul\Product\Repositories;
- 
+
 use Illuminate\Container\Container as App;
 use Webkul\Core\Eloquent\Repository;
 use Webkul\Attribute\Repositories\AttributeRepository;
@@ -14,6 +14,7 @@ use Webkul\Product\Contracts\Criteria\SortCriteria;
 use Webkul\Product\Contracts\Criteria\AttributeToSelectCriteria;
 use Webkul\Product\Contracts\Criteria\FilterByAttributesCriteria;
 use Webkul\Product\Contracts\Criteria\FilterByCategoryCriteria;
+use Webkul\Product\Contracts\Criteria\FilterByNameCriteria;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 
 /**
@@ -211,7 +212,7 @@ class ProductRepository extends Repository
         }
 
         $this->productInventory->saveInventories($data, $product);
-        
+
         $this->productImage->uploadImages($data, $product);
 
         return $product;
@@ -322,7 +323,7 @@ class ProductRepository extends Repository
                     'channel' => $attribute->value_per_channel ? $data['channel'] : null,
                     'locale' => $attribute->value_per_locale ? $data['locale'] : null
                 ]);
-            
+
             if(!$attributeValue) {
                 $this->attributeValue->create([
                         'product_id' => $id,
@@ -395,12 +396,27 @@ class ProductRepository extends Repository
             ]));
 
         $params = request()->input();
-        
+
         return $this->scopeQuery(function($query){
                 return $query->distinct()->addSelect('products.*');
             })->paginate(isset($params['limit']) ? $params['limit'] : 9, ['products.id']);
     }
 
+    /**
+     * Retrive all product
+     *
+     *
+     */
+    public function findAllProduct(){
+        $this->pushCriteria(app(FilterByAttributesCriteria::class));
+        $this->pushCriteria(app(AttributeToSelectCriteria::class)->addAttribueToSelect([
+            'name',
+        ]));
+
+        return $this->scopeQuery(function($query){
+            return $query->distinct()->addSelect('products.*');
+        });
+    }
     /**
      * Retrive product from slug
      *
@@ -422,5 +438,19 @@ class ProductRepository extends Repository
         throw (new ModelNotFoundException)->setModel(
             get_class($this->model), $slug
         );
+    }
+
+    public function findAndFilter($attribute = 'name') {
+        //$product = $this->model->find(6)->getAttribute($attribute);
+
+
+        $this->pushCriteria(app(FilterByNameCriteria::class)->addFilterByNameCriteria([
+            $attribute
+        ]));
+
+        return $this->scopeQuery(function($query) {
+            return $query->distinct()->addSelect('products.sku');
+        })->get();
+
     }
 }

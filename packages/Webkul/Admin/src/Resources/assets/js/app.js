@@ -1,18 +1,24 @@
 window.jQuery = window.$ = $ = require("jquery");
 window.Vue = require("vue");
 window.VeeValidate = require("vee-validate");
-
+window.Vue = require('vue');
+window.axios = require('axios');
+window.axios.defaults.headers.common = {
+    'X-Requested-With': 'XMLHttpRequest'
+};
 Vue.use(VeeValidate);
 
 Vue.component("datetime", require("./components/datetime"));
 Vue.component("date", require("./components/date"));
 require('flatpickr/dist/flatpickr.css');
 
+
 $(document).ready(function () {
     Vue.config.ignoredElements = [
         'option-wrapper',
         'group-form',
-        'group-list'
+        'group-list',
+        'up-selling'
     ];
 
     var app = new Vue({

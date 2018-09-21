@@ -11,3 +11,4 @@ Vue.component("image-wrapper", require("./components/image/image-wrapper"));
 Vue.component("image-item", require("./components/image/image-item"));
 Vue.directive("slugify", require("./directives/slugify"));
 Vue.directive("code", require("./directives/code"));
+Vue.component('autocomplete',require('./components/Autocomplete.vue'));
