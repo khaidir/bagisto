@@ -130,41 +130,34 @@
         }
 
         window.onload = function() {
-
             var thumbList = document.getElementsByClassName('thumb-list')[0];
             var thumbFrame = document.getElementsByClassName('thumb-frame');
             var productHeroImage = document.getElementsByClassName('product-hero-image')[0];
 
-            if(thumbList && productHeroImage){
-
-                for(let i=0 ; i < thumbFrame.length ; i++){
-                    thumbFrame[i].style.height = (productHeroImage.offsetHeight/4) + "px";
-                    thumbFrame[i].style.width = (productHeroImage.offsetHeight/4)+ "px";
-                }
-
-                thumbList.style.width = (productHeroImage.offsetHeight/4) + "px";
-                thumbList.style.minWidth = (productHeroImage.offsetHeight/4) + "px";
-                thumbList.style.height = productHeroImage.offsetHeight + "px";
-            }
+            imageSizeCalculate();
 
             window.onresize = function() {
-                if(thumbList && productHeroImage){
-
-                    for(let i=0 ; i < thumbFrame.length ; i++){
-                        thumbFrame[i].style.height = (productHeroImage.offsetHeight/4) + "px";
-                        thumbFrame[i].style.width = (productHeroImage.offsetHeight/4)+ "px";
-                    }
-
-                    thumbList.style.width = (productHeroImage.offsetHeight/4) + "px";
-                    thumbList.style.minWidth = (productHeroImage.offsetHeight/4) + "px";
-                    thumbList.style.height = productHeroImage.offsetHeight + "px";
-                }
+                imageSizeCalculate();
             }
 
+            function imageSizeCalculate() {
+                if(thumbList && productHeroImage){
+                    if(document.documentElement.clientWidth > 720) {
+
+                        for(let i=0 ; i < thumbFrame.length ; i++){
+                            thumbFrame[i].style.height = (productHeroImage.offsetHeight/4) + "px";
+                            thumbFrame[i].style.width = (productHeroImage.offsetHeight/4)+ "px";
+                        }
+
+                        thumbList.style.width = (productHeroImage.offsetHeight/4) + "px";
+                        thumbList.style.minWidth = (productHeroImage.offsetHeight/4) + "px";
+                        thumbList.style.height = productHeroImage.offsetHeight + "px";
+                    }
+                }
+            }
         };
 
     </script>
-
 
 @endpush
 
