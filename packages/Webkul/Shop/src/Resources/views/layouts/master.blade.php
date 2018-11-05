@@ -28,7 +28,7 @@
 </head>
 
 <body>
-    <div id="app">
+    <div id="app" class="rtl">
         <flash-wrapper ref='flashes'></flash-wrapper>
 
         <div class="main-container-wrapper">
