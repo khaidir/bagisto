@@ -134,24 +134,28 @@
             var thumbFrame = document.getElementsByClassName('thumb-frame');
             var productHeroImage = document.getElementsByClassName('product-hero-image')[0];
 
-            imageSizeCalculate();
+            var height = (480-productHeroImage.offsetHeight)/4 + productHeroImage.offsetHeight;
+
+            console.log(height);
+
+            imageSizeCalculate(height);
 
             window.onresize = function() {
-                imageSizeCalculate();
+                var h = productHeroImage.offsetHeight;
+                imageSizeCalculate(h);
             }
 
-            function imageSizeCalculate() {
+            function imageSizeCalculate(height) {
                 if(thumbList && productHeroImage){
                     if(document.documentElement.clientWidth > 720) {
 
                         for(let i=0 ; i < thumbFrame.length ; i++){
-                            thumbFrame[i].style.height = (productHeroImage.offsetHeight/4) + "px";
-                            thumbFrame[i].style.width = (productHeroImage.offsetHeight/4)+ "px";
+                            thumbFrame[i].style.height = (height/4) + "px";
+                            thumbFrame[i].style.width = (height/4)+ "px";
                         }
 
-                        thumbList.style.width = (productHeroImage.offsetHeight/4) + "px";
-                        thumbList.style.minWidth = (productHeroImage.offsetHeight/4) + "px";
-                        thumbList.style.height = productHeroImage.offsetHeight + "px";
+                        thumbList.style.minWidth = (height/4) + "px";
+                        thumbList.style.height = height + "px";
                     }
                 }
             }
