@@ -134,9 +134,7 @@
             var thumbFrame = document.getElementsByClassName('thumb-frame');
             var productHeroImage = document.getElementsByClassName('product-hero-image')[0];
 
-            var height = (480-productHeroImage.offsetHeight)/4 + productHeroImage.offsetHeight;
-
-            console.log(height);
+            var height = (480-productHeroImage.offsetHeight)/4 + productHeroImage.offsetHeight-4;
 
             imageSizeCalculate(height);
 

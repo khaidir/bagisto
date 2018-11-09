@@ -947,7 +947,7 @@ section.slider-block {
             }
 
             li:last-child {
-                margin-right: 0px;
+                margin-right: -2px;
             }
 
             ul {
@@ -1291,6 +1291,10 @@ section.slider-block {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+
+    p {
+        padding: 0px 15px;
+    }
 }
 
 //category page
@@ -1392,6 +1396,7 @@ section.slider-block {
             width: 100%;
             float: none;
             padding-right: 0px;
+            margin-top: -25px !important;
         }
 
         .category-block {
@@ -1827,6 +1832,11 @@ section.product-detail {
                         margin-right: auto;
                         width: 480px;
                     }
+                }
+
+                .wrap {
+                    flex-direction: row;
+                    width: 100% !important;
                 }
             }
         }
@@ -2737,7 +2747,7 @@ section.review {
         border: 1px solid $border-color;
         flex-direction: column;
         max-width: 500px;
-        min-width: 380px;
+        min-width: 320px;
         padding: 25px;
 
         .login-text {
@@ -3232,6 +3242,16 @@ section.review {
     }
 }
 
+//css for responsive error pages
+@media only screen and (max-width: 720px) {
+    .error-container .wrapper {
+        flex-direction: column-reverse !important;
+        margin: 10px 0px 20px 0px !important;
+        align-items: start !important;
+        height: 100% !important;
+    }
+}
+
 
 
 
@@ -3332,6 +3352,19 @@ section.review {
         .header{
             .header-top ul.right-responsive {
                 margin-left: 0px;
+
+                li {
+                    margin: 0px;
+
+                    &:last-child {
+                        margin-right: 5px;
+                        margin-left: -2px;
+                    }
+                }
+
+                ul {
+                    margin: 0px;
+                }
             }
 
             .header-bottom {
@@ -3687,6 +3720,21 @@ section.review {
     }
     // footer end
 
+    // css for loader
+    .cp-spinner {
+        position: absolute;
+        left: auto;
+        right: 26%;
+        margin-top: calc(20% - 80px);
+    }
+
+    @media only screen and (max-width: 720px) {
+        .cp-spinner {
+            right: 50%;
+            margin-right: -24px;
+            left: auto;
+        }
+    }
 }
 
 /// rtl css end here
