@@ -2694,8 +2694,12 @@ section.review {
                 width: 100%;
                 margin-left: 0px;
 
-                .heading .right {
-                    margin-top: 50px;
+                .heading {
+                    margin-bottom: 70px;
+
+                    .right {
+                        margin-top: 50px;
+                    }
                 }
 
                 .ratings-reviews {

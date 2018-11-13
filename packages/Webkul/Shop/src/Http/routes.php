@@ -130,7 +130,7 @@ Route::group(['middleware' => ['web', 'theme', 'locale', 'currency']], function 
 
         //registration form store
         Route::post('register', 'Webkul\Customer\Http\Controllers\RegistrationController@create')->defaults('_config', [
-            'redirect' => 'customer.account.index',
+            'redirect' => 'customer.profile.index',
         ])->name('customer.register.create');
 
         // Auth Routes
