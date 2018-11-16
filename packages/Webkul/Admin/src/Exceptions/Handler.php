@@ -59,21 +59,20 @@ class Handler extends ExceptionHandler
             }else {
                 return response()->view('shop::errors.404', [], 404);
             }
-        } else if ($exception instanceof PDOException) {
+        } else if ($exception instanceof \PDOException) {
             if (strpos($_SERVER['REQUEST_URI'], 'admin') !== false){
                 return response()->view('admin::errors.500', [], 500);
             } else {
                 return response()->view('shop::errors.500', [], 500);
             }
         }
-        // else if ($exception instanceof ErrorException) {
+        // else if ($exception instanceof \ErrorException) {
 
         //     if(strpos($_SERVER['REQUEST_URI'], 'admin') !== false){
         //         return response()->view('admin::errors.500', [], 500);
         //     }else {
         //         return response()->view('shop::errors.500', [], 500);
         //     }
-
         // }
 
         return parent::render($request, $exception);

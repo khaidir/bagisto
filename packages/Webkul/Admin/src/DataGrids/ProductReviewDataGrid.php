@@ -83,11 +83,18 @@ class ProductReviewDataGrid
                     'label' => 'Title',
                     'sortable' => true,
                 ], [
-                    'name' => 'pr.comment',
-                    'alias' => 'productComment',
-                    'type' => 'string',
-                    'label' => 'Comment',
+                    'name' => 'pr.rating',
+                    'alias' => 'productRating',
+                    'type' => 'number',
+                    'label' => 'Rating',
                     'sortable' => true,
+                    'wrapper' => function ($value) {
+                        $values = array();
+                        for ($i=1; $i <= $value ; $i++) {
+                            $values[] = '<span class="icon star-icon"></span>';
+                        }
+                        return implode("",$values);
+                    },
                 ],
                 [
                     'name' => 'pt.name',
@@ -124,10 +131,10 @@ class ProductReviewDataGrid
                     'type' => 'string',
                     'label' => 'Title',
                 ], [
-                    'column' => 'pr.comment',
-                    'alias' => 'productComment',
-                    'type' => 'string',
-                    'label' => 'Comment',
+                    'column' => 'pr.rating',
+                    'alias' => 'productRating',
+                    'type' => 'number',
+                    'label' => 'Rating',
                 ], [
                     'column' => 'pt.name',
                     'alias' => 'productName',

@@ -507,6 +507,7 @@ body {
 
 
 
+
 // css for rtl start here
 .rtl {
     direction: rtl;
@@ -597,14 +598,14 @@ body {
 
         .graph-stats {
             .left-card-container {
-                float: right;
                 padding-right: 0px;
+                padding-left: 9px;
+                float: right;
             }
 
             .right-card-container {
-                float: right;
                 padding-left: 0px;
-                padding-right: 30px;
+                padding-right: 21px;
             }
         }
     }
@@ -654,20 +655,16 @@ body {
         margin-right: 0px;
     }
 
-    .table table {
-        text-align: right;
-    }
-
     .dropdown-list.bottom-right {
         left: 0px;
         right: auto;
     }
 
-    .dropdown-list .dropdown-container {
+    .dropdown-list .dropdown-container, .table table {
         text-align: right;
     }
 
-    .accordian .accordian-header .icon {
+    .accordian .accordian-header .icon, .control-group label .locale {
         float: left;
     }
 
@@ -697,20 +694,6 @@ body {
         }
     }
 
-    .control-group label.required::before {
-        content: "*";
-        color: #FC6868;
-        font-weight: 700;
-    }
-
-    .control-group label.required::after {
-        content: none;
-    }
-
-    .control-group label .locale {
-        float: left;
-    }
-
     .control-group.date {
         &::after {
             margin-top: 15px;
@@ -721,6 +704,16 @@ body {
 
     .pagination .page-item .icon {
         transform: rotate(180deg);
+    }
+
+    .checkbox .checkbox-view {
+        margin-right: 0px;
+        margin-left: 5px;
+    }
+
+    .checkbox input {
+        right: 0;
+        left: auto;
     }
 }
 // css for rtl end here

@@ -127,6 +127,7 @@
                     layerFilter.style.display = "none";
                 }
             }
+
         });
     </script>
 @endpush

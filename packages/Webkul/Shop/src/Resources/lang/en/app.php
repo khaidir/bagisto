@@ -36,11 +36,12 @@ return [
     'reviews' => [
         'title' => 'Title',
         'add-review-page-title' => 'Add Review',
-        'write-review' => 'Write a review',
+        'write-review' => 'Write Review',
         'review-title' => 'Give Your Review a Title',
         'product-review-page-title' => 'Product Review',
         'rating-reviews' => 'Rating & Reviews',
         'submit' => 'SUBMIT',
+        'star' => 'Star',
     ],
 
     'customer' => [

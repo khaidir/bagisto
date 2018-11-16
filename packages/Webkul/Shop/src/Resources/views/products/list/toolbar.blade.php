@@ -76,6 +76,6 @@
 </div>
 
 
-<div class="responsive-layred-filter mb-20">
+<div class="responsive-layred-filter mb-35">
     <layered-navigation></layered-navigation>
 </div>
