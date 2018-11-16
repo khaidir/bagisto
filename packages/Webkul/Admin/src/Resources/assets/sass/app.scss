@@ -17,7 +17,7 @@ body {
 
 .navbar-top {
     height: 60px;
-    background: #ffffff;
+    background: $white-background-color;
     font-size: 0;
     @include box-shadow(0 3px 6px 0 rgba(0, 0, 0, 0.05));
     border-bottom: 1px solid $border-color;
@@ -61,13 +61,13 @@ body {
             }
 
             .name {
-                color: #000311;
+                color: $black-color;
                 display: block;
                 text-align: left;
             }
             .role {
                 font-size: 14px;
-                color: #8e8e8e;
+                color: $title-color;
                 display: block;
                 text-align: left;
             }
@@ -98,12 +98,12 @@ body {
             text-transform: uppercase;
 
             a {
-                color: #a2a2a2;
+                color: $dark-white-color;
             }
 
             &.active {
                 a {
-                    color: #0041ff;
+                    color: $brand-color;
                 }
             }
         }
@@ -127,7 +127,7 @@ body {
         top: 60px;
         bottom: 0;
         border-right: 1px solid $border-color;
-        background: #f8f9fa;
+        background: $nav-background-color;
         padding-top: 10px;
         overflow-y: auto;
         z-index: 4;
@@ -135,12 +135,12 @@ body {
         a {
             padding: 15px;
             display: block;
-            color: #000311;
+            color: $black-color;
         }
 
         .active {
             a {
-                background: #ffffff;
+                background: $white-background-color;
                 border-top: 1px solid $border-color;
                 border-bottom: 1px solid $border-color;
             }
@@ -212,7 +212,7 @@ body {
 
         .locale {
             float: right;
-            color: #8E8E8E;
+            color: $title-color;
         }
     }
 
@@ -245,7 +245,7 @@ body {
 //                 margin: 0px;
 //                 display: inline-block;
 //                 vertical-align: middle;
-//                 border: 1px solid #c7c7c7;
+//                 border: 1px solid $white-border-color;
 //                 border-radius: 4px;
 //                 padding-left: 5px;
 //                 padding-right: 5px;
@@ -277,15 +277,15 @@ body {
 
     .card {
         height: 445px;
-        background: #FFFFFF;
-        border: 1px solid #E7E7E7;
+        background: $white-background-color;
+        border: 1px solid $card-border-color;
         box-shadow: 0 5px 10px 2px rgba(0,0,0,0.08);
         border-radius: 2px;
         padding: 20px 0px 0px 20px;
 
         .card-title {
             font-size: 14px;
-            color: #A2A2A2;
+            color: $dark-white-color;
             letter-spacing: -0.26px;
             text-transform: uppercase;
         }
@@ -314,7 +314,7 @@ body {
                         margin-right: 15px;
 
                         &.product {
-                            background: #F2F2F2;
+                            background: $image-product-color;
                         }
 
                         img {
@@ -326,11 +326,11 @@ body {
                         margin-top: 10px;
 
                         .name {
-                            color: #0041FF;
+                            color: $brand-color;
                         }
 
                         .info {
-                            color: #3A3A3A;
+                            color: $font-color;
                             margin-top: 5px;
                         }
                     }
@@ -353,7 +353,7 @@ body {
 
                 p {
                     margin: 0;
-                    color: #A2A2A2;
+                    color: $dark-white-color;
                 }
             }
         }
@@ -368,8 +368,8 @@ body {
 
         .dashboard-card {
             height: 100px;
-            background: #FFFFFF;
-            border: 1px solid #E7E7E7;
+            background: $white-background-color;
+            border: 1px solid $card-border-color;
             box-shadow: 0 5px 10px 2px rgba(0,0,0,0.08);
             border-radius: 5px;
             position: relative;
@@ -378,18 +378,18 @@ body {
 
             .title {
                 font-size: 14px;
-                color: #A2A2A2;
+                color: $dark-white-color;
                 text-transform: uppercase;
             }
 
             .data {
                 padding-top: 3px;
                 font-size: 32px;
-                color: #0041FF;
+                color: $brand-color;
 
                 .progress {
                     font-size: 14px;
-                    color: #8E8E8E;
+                    color: $title-color;
                     float: right;
                     margin-top: 9px;
 
@@ -439,7 +439,7 @@ body {
 
         .secton-title {
             font-size: 18px;
-            color: #8E8E8E;
+            color: $title-color;
             padding: 15px 0;
             border-bottom: 1px solid $border-color;
         }
@@ -617,7 +617,7 @@ body {
     // ui
     .grid-container .filter-wrapper {
         .filter-row-one .search-filter {
-            border: 2px solid #C7C7C7;
+            border: 2px solid $white-border-color;
 
             .control {
                 border: none;
