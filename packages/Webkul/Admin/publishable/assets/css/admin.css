@@ -434,11 +434,14 @@
   border-bottom: 1px solid rgba(162, 162, 162, 0.2);
 }
 
+<<<<<<< HEAD
 .icon.star {
   height: 16px !important;
   width: 16px !important;
 }
 
+=======
+>>>>>>> 8c12e35621ac9533ba9c7a89a1bbbab6e7c19fa4
 .rtl {
   direction: rtl;
 }
@@ -521,6 +524,7 @@
 }
 
 .rtl .dashboard .graph-stats .left-card-container {
+<<<<<<< HEAD
   padding-right: 0px;
   padding-left: 9px;
   float: right;
@@ -529,6 +533,16 @@
 .rtl .dashboard .graph-stats .right-card-container {
   padding-left: 0px;
   padding-right: 21px;
+=======
+  float: right;
+  padding-right: 0px;
+}
+
+.rtl .dashboard .graph-stats .right-card-container {
+  float: right;
+  padding-left: 0px;
+  padding-right: 30px;
+>>>>>>> 8c12e35621ac9533ba9c7a89a1bbbab6e7c19fa4
 }
 
 .rtl .sale-container .sale-summary {
@@ -573,16 +587,31 @@
   margin-right: 0px;
 }
 
+<<<<<<< HEAD
+=======
+.rtl .table table {
+  text-align: right;
+}
+
+>>>>>>> 8c12e35621ac9533ba9c7a89a1bbbab6e7c19fa4
 .rtl .dropdown-list.bottom-right {
   left: 0px;
   right: auto;
 }
 
+<<<<<<< HEAD
 .rtl .dropdown-list .dropdown-container, .rtl .table table {
   text-align: right;
 }
 
 .rtl .accordian .accordian-header .icon, .rtl .control-group label .locale {
+=======
+.rtl .dropdown-list .dropdown-container {
+  text-align: right;
+}
+
+.rtl .accordian .accordian-header .icon {
+>>>>>>> 8c12e35621ac9533ba9c7a89a1bbbab6e7c19fa4
   float: left;
 }
 
@@ -612,6 +641,23 @@
   margin-right: 0px;
 }
 
+<<<<<<< HEAD
+=======
+.rtl .control-group label.required::before {
+  content: "*";
+  color: #FC6868;
+  font-weight: 700;
+}
+
+.rtl .control-group label.required::after {
+  content: none;
+}
+
+.rtl .control-group label .locale {
+  float: left;
+}
+
+>>>>>>> 8c12e35621ac9533ba9c7a89a1bbbab6e7c19fa4
 .rtl .control-group.date::after {
   margin-top: 15px;
   position: absolute;
@@ -622,6 +668,7 @@
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
+<<<<<<< HEAD
 
 .rtl .checkbox .checkbox-view {
   margin-right: 0px;
@@ -632,3 +679,5 @@
   right: 0;
   left: auto;
 }
+=======
+>>>>>>> 8c12e35621ac9533ba9c7a89a1bbbab6e7c19fa4
