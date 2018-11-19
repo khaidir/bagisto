@@ -31,8 +31,15 @@ return [
         'subscribe' => 'Subscribe',
         'subscribed' => 'You Are Now Subscribed To Subscription Emails',
         'not-subscribed' => 'You Cannot Be Subscribed To Subscription Emails, Try Again After Some time',
-        'already' => 'You Are Already Subscribed To Our Subscription List'
+        'already' => 'You Are Already Subscribed To Our Subscription List',
+        'un-subscribe' => 'You Are Unsubscribed To Subscription Emails',
+        'already-unsubcribe' => 'You have Already Unsubscribed To Subscription Emails or Wrong   Request',
+        'title' => 'Keep in Touch',
+        'message' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        'subscribed' => 'Subscribed',
+        'not-subscribed' => 'Not Subscribed',
     ],
+
 
     'search' => [
         'no-results' => 'No Results Found',

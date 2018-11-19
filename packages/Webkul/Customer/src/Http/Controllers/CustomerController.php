@@ -108,7 +108,7 @@ class CustomerController extends Controller
 
         if($data['oldpassword'] == null) {
             $data = collect(request()->input())->except(['_token','password','password_confirmation','oldpassword'])->toArray();
-            
+
             if($this->customer->update($data, $id)) {
                 Session()->flash('success','Profile Updated Successfully');
 

@@ -3254,6 +3254,20 @@ section.review {
     }
 }
 
+//verify account
+.verify-account {
+    text-align: center;
+    background: $info-color;
+    width: 200px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 4px;
+
+    a {
+        color: $btn-background-color !important;
+    }
+}
+
 // css for loader
 .cp-spinner {
     position: absolute;

@@ -35,6 +35,14 @@
 
             @include('shop::layouts.header.index')
 
+            @auth('customer')
+                @if(auth()->guard('customer')->user()->is_verified == 0)
+                    <div class="verify-account">
+                        <a  href="{{ route('customer.verify', auth()->guard('customer')->user()->email) }}"> Verify Your Account </a>
+                    </div>
+                @endif
+            @endauth
+
             @yield('slider')
 
             <div class="content-container">
