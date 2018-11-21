@@ -71,15 +71,9 @@
             "Webkul\\Theme\\": "packages/Webkul/Theme/src",
             "Webkul\\Shipping\\": "packages/Webkul/Shipping/src",
             "Webkul\\Payment\\": "packages/Webkul/Payment/src",
-<<<<<<< HEAD
-            "Webkul\\Sales\\": "packages/Webkul/Sales/src",
-            "Webkul\\Tax\\": "packages/Webkul/Tax/src"
-=======
             "Webkul\\Paypal\\": "packages/Webkul/Paypal/src",
             "Webkul\\Sales\\": "packages/Webkul/Sales/src",
-            "Webkul\\Tax\\": "packages/Webkul/Tax/src",
-            "Webkul\\API\\": "packages/Webkul/API"
->>>>>>> 1c274447057da2b16e13a1b849e727667069c5aa
+            "Webkul\\Tax\\": "packages/Webkul/Tax/src"
         }
     },
     "autoload-dev": {
