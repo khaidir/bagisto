@@ -7,6 +7,16 @@ Route::group(['middleware' => ['web', 'theme', 'locale', 'currency']], function 
         'view' => 'shop::home.index'
     ])->name('shop.home.index');
 
+<<<<<<< HEAD
+=======
+    //subscription
+    //subscribe
+    Route::get('/subscribe', 'Webkul\Shop\Http\Controllers\SubscriptionController@subscribe')->name('shop.subscribe');
+
+    //unsubscribe
+    Route::get('/unsubscribe', 'Webkul\Shop\Http\Controllers\SubscriptionController@unSubscribe')->name('shop.unsubscribe');
+
+>>>>>>> 1c274447057da2b16e13a1b849e727667069c5aa
     //Store front header nav-menu fetch
     Route::get('/categories/{slug}', 'Webkul\Shop\Http\Controllers\CategoryController@index')->defaults('_config', [
         'view' => 'shop::products.index'
@@ -17,6 +27,19 @@ Route::group(['middleware' => ['web', 'theme', 'locale', 'currency']], function 
         'view' => 'shop::search.search'
     ])->name('shop.search.index');
 
+<<<<<<< HEAD
+=======
+    //Country State Selector
+    Route::get('get/countries', 'Webkul\Core\Http\Controllers\CountryStateController@getCountries')->defaults('_config', [
+        'view' => 'shop::test'
+    ])->name('get.countries');
+
+    //Get States When Country is Passed
+    Route::get('get/states/{country}', 'Webkul\Core\Http\Controllers\CountryStateController@getStates')->defaults('_config', [
+        'view' => 'shop::test'
+    ])->name('get.states');
+
+>>>>>>> 1c274447057da2b16e13a1b849e727667069c5aa
     //checkout and cart
     //Cart Items(listing)
     Route::get('checkout/cart', 'Webkul\Shop\Http\Controllers\CartController@index')->defaults('_config', [
@@ -147,12 +170,21 @@ Route::group(['middleware' => ['web', 'theme', 'locale', 'currency']], function 
             //Customer Wishlist remove
             Route::get('wishlist/remove/{id}', 'Webkul\Customer\Http\Controllers\WishlistController@remove')->name('customer.wishlist.remove');
 
+<<<<<<< HEAD
             //Customer Wishlist move to cart
             Route::get('wishlist/move/{id}', 'Webkul\Customer\Http\Controllers\WishlistController@move')->name('customer.wishlist.move');
 
             //Customer Wishlist move all to cart
             Route::get('wishlist/moveall', 'Webkul\Customer\Http\Controllers\WishlistController@moveAll')->name('customer.wishlist.moveall');
 
+=======
+            //Customer Wishlist remove
+            Route::get('wishlist/removeall', 'Webkul\Customer\Http\Controllers\WishlistController@removeAll')->name('customer.wishlist.removeall');
+
+            //Customer Wishlist move to cart
+            Route::get('wishlist/move/{id}', 'Webkul\Customer\Http\Controllers\WishlistController@move')->name('customer.wishlist.move');
+
+>>>>>>> 1c274447057da2b16e13a1b849e727667069c5aa
             //customer account
             Route::prefix('account')->group(function () {
                 //Customer Dashboard Route

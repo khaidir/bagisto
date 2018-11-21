@@ -144,6 +144,10 @@ return [
             'cancel-confirm-msg' => 'Are you sure you want to cancel this order ?'
         ],
         'invoices' => [
+<<<<<<< HEAD
+=======
+            'title' => 'Invoices',
+>>>>>>> 1c274447057da2b16e13a1b849e727667069c5aa
             'id' => 'Id',
             'invoice-id' => 'Invoice Id',
             'date' => 'Invoice Date',
@@ -164,6 +168,10 @@ return [
             'order-date' => 'Order Date'
         ],
         'shipments' => [
+<<<<<<< HEAD
+=======
+            'title' => 'Shipments',
+>>>>>>> 1c274447057da2b16e13a1b849e727667069c5aa
             'id' => 'Id',
             'date' => 'Shipment Date',
             'order-id' => 'Order Id',

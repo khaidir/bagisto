@@ -11,10 +11,18 @@ class Order extends Model implements OrderContract
 
     protected $statusLabel = [
         'pending' => 'Pending',
+<<<<<<< HEAD
+=======
+        'pending_payment' => 'Pending Payment',
+>>>>>>> 1c274447057da2b16e13a1b849e727667069c5aa
         'processing' => 'Processing',
         'completed' => 'Completed',
         'canceled' => 'Canceled',
         'closed' => 'Closed',
+<<<<<<< HEAD
+=======
+        'fraud' => 'Fraud'
+>>>>>>> 1c274447057da2b16e13a1b849e727667069c5aa
     ];
 
     /**
@@ -138,6 +146,12 @@ class Order extends Model implements OrderContract
      */
     public function canShip()
     {
+<<<<<<< HEAD
+=======
+        if($this->status == 'fraud')
+            return false;
+
+>>>>>>> 1c274447057da2b16e13a1b849e727667069c5aa
         foreach ($this->items as $item) {
             if ($item->qty_to_ship > 0) {
                 return true;
@@ -152,6 +166,12 @@ class Order extends Model implements OrderContract
      */
     public function canInvoice()
     {
+<<<<<<< HEAD
+=======
+        if($this->status == 'fraud')
+            return false;
+            
+>>>>>>> 1c274447057da2b16e13a1b849e727667069c5aa
         foreach ($this->items as $item) {
             if ($item->qty_to_invoice > 0) {
                 return true;
@@ -166,6 +186,12 @@ class Order extends Model implements OrderContract
      */
     public function canCancel()
     {
+<<<<<<< HEAD
+=======
+        if($this->status == 'fraud')
+            return false;
+            
+>>>>>>> 1c274447057da2b16e13a1b849e727667069c5aa
         foreach($this->items as $item) {
             if ($item->qty_to_cancel > 0) {
                 return true;

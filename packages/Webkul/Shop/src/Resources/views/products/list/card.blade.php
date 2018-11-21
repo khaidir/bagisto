@@ -37,9 +37,15 @@
         @else
             @if($product->type == "configurable")
                 <div class="cart-wish-wrap">
+<<<<<<< HEAD
                     <button href="{{ route('cart.add.configurable', $product->url_key) }}" class="btn btn-lg btn-primary addtocart">
                         {{ __('shop::app.products.add-to-cart') }}
                     </button>
+=======
+                    <a href="{{ route('cart.add.configurable', $product->url_key) }}" class="btn btn-lg btn-primary addtocart">
+                        {{ __('shop::app.products.add-to-cart') }}
+                    </a>
+>>>>>>> 1c274447057da2b16e13a1b849e727667069c5aa
 
                     @include('shop::products.wishlist')
                 </div>

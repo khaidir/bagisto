@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 <div class="{{ $css->filter }}filter-wrapper">
     <div class="filter-row-one">
         <div class="search-filter" style="display: inline-flex; align-items: center;">
             <input type="search" class="control search-field" placeholder="Search Users" value="" />
+=======
+<div class="{{ $css->filter }} filter-wrapper">
+    <div class="filter-row-one">
+        <div class="search-filter" style="display: inline-flex; align-items: center;">
+            <input type="search" class="control search-field" placeholder="Search Here..." value="" />
+>>>>>>> 1c274447057da2b16e13a1b849e727667069c5aa
             <div class="ic-wrapper">
                 <span class="icon search-icon search-btn"></span>
             </div>

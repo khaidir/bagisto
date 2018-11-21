@@ -66,7 +66,11 @@
                             {{ $reviewHelper->getAverageRating($product) }}
                         </span>
 
+<<<<<<< HEAD
                         @for($i = 1; $i <= $reviewHelper->getAverageRating($product) ; $i++)
+=======
+                        @for($i=1;$i<=$reviewHelper->getAverageRating($product);$i++)
+>>>>>>> 1c274447057da2b16e13a1b849e727667069c5aa
                         <span class="stars">
                             <span class="icon star-icon"></span>
                         </span>

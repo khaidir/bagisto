@@ -1,4 +1,9 @@
 {
+<<<<<<< HEAD
     "/js/admin.js": "/js/admin.js?id=f1263c1a00f0c20034d6",
     "/css/admin.css": "/css/admin.css?id=201f91bc553baa11139f"
+=======
+    "/js/admin.js": "/js/admin.js",
+    "/css/admin.css": "/css/admin.css"
+>>>>>>> 1c274447057da2b16e13a1b849e727667069c5aa
 }

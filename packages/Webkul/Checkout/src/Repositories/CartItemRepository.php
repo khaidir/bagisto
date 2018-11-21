@@ -26,6 +26,7 @@ class CartItemRepository extends Repository
 
     /**
      * @param array $data
+<<<<<<< HEAD
      * @return mixed
      */
 
@@ -38,6 +39,8 @@ class CartItemRepository extends Repository
 
     /**
      * @param array $data
+=======
+>>>>>>> 1c274447057da2b16e13a1b849e727667069c5aa
      * @param $id
      * @param string $attribute
      * @return mixed

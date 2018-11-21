@@ -85,11 +85,22 @@ class CartController extends Controller
      *
      * @return Mixed
      */
+<<<<<<< HEAD
 
     public function add($id) {
         $data = request()->input();
 
         Cart::add($id, $data);
+=======
+    public function add($id) {
+        $result = Cart::add($id, request()->except('_token'));
+
+        if($result) {
+            session()->flash('success', trans('shop::app.checkout.cart.item.success'));
+        } else {
+            session()->flash('success', trans('shop::app.checkout.cart.item.error-add'));
+        }
+>>>>>>> 1c274447057da2b16e13a1b849e727667069c5aa
 
         Cart::collectTotals();
 
@@ -115,9 +126,15 @@ class CartController extends Controller
      * @return response
      */
     public function updateBeforeCheckout() {
+<<<<<<< HEAD
         $data = request()->except('_token');
 
         foreach($data['qty'] as $id => $quantity) {
+=======
+        $request = request()->except('_token');
+
+        foreach($request['qty'] as $id => $quantity) {
+>>>>>>> 1c274447057da2b16e13a1b849e727667069c5aa
             if($quantity <= 0) {
                 session()->flash('warning', trans('shop::app.checkout.cart.quantity.illegal'));
 
@@ -125,7 +142,20 @@ class CartController extends Controller
             }
         }
 
+<<<<<<< HEAD
         Cart::update($data);
+=======
+        foreach($request['qty'] as $key => $value) {
+            $item = $this->cartItem->findOneByField('id', $key);
+
+            $data['quantity'] = $value;
+
+            Cart::updateItem($item->product_id, $data, $key);
+
+            unset($item);
+            unset($data);
+        }
+>>>>>>> 1c274447057da2b16e13a1b849e727667069c5aa
 
         Cart::collectTotals();
 
@@ -144,7 +174,11 @@ class CartController extends Controller
     }
 
     public function buyNow($id) {
+<<<<<<< HEAD
         $result = Cart::proceedForBuyNow($id);
+=======
+        $result = Cart::proceedToBuyNow($id);
+>>>>>>> 1c274447057da2b16e13a1b849e727667069c5aa
 
         Cart::collectTotals();
 
@@ -164,6 +198,7 @@ class CartController extends Controller
     public function moveToWishlist($id) {
         $result = Cart::moveToWishlist($id);
 
+<<<<<<< HEAD
         if($result) {
             Cart::collectTotals();
 
@@ -172,6 +207,16 @@ class CartController extends Controller
             return redirect()->back();
         } else {
             session()->flash('warning', 'Cannot move item to wishlist');
+=======
+        if(!$result) {
+            Cart::collectTotals();
+
+            session()->flash('success', trans('shop::app.wishlist.moved'));
+
+            return redirect()->back();
+        } else {
+            session()->flash('warning', trans('shop::app.wishlist.move-error'));
+>>>>>>> 1c274447057da2b16e13a1b849e727667069c5aa
 
             return redirect()->back();
         }

@@ -90,7 +90,11 @@ class OrderRepository extends Repository
                 unset($data['channel']);
             }
 
+<<<<<<< HEAD
             $data['status'] = core()->getConfigData('paymentmethods.' . $data['payment']['method'] . '.status') ?? 'pending';
+=======
+            $data['status'] = core()->getConfigData('paymentmethods.' . $data['payment']['method'] . '.order_status') ?? 'pending';
+>>>>>>> 1c274447057da2b16e13a1b849e727667069c5aa
 
             $order = $this->model->create(array_merge($data, ['increment_id' => $this->generateIncrementId()]));
 

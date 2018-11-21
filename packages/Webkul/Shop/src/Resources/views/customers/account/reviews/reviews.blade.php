@@ -28,7 +28,11 @@
                                 <div class="product-name">{{$review->product->name}}</div>
 
                                 <div>
+<<<<<<< HEAD
                                     @for($i=0 ; $i < $review->rating ; $i++)
+=======
+                                    @for($i=0;$i<$review->rating;$i++)
+>>>>>>> 1c274447057da2b16e13a1b849e727667069c5aa
                                         <span class="icon star-icon"></span>
                                     @endfor
                                 </div>

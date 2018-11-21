@@ -5,10 +5,18 @@ namespace Webkul\Customer\Models;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Webkul\Customer\Models\CustomerGroup;
+<<<<<<< HEAD
 use Webkul\Sales\Models\Order;
 use Webkul\Customer\Notifications\CustomerResetPassword;
 
 
+=======
+use Webkul\Checkout\Models\Cart;
+use Webkul\Sales\Models\Order;
+use Webkul\Customer\Models\Wishlist;
+use Webkul\Customer\Notifications\CustomerResetPassword;
+
+>>>>>>> 1c274447057da2b16e13a1b849e727667069c5aa
 class Customer extends Authenticatable
 {
     use Notifiable;
@@ -19,9 +27,13 @@ class Customer extends Authenticatable
 
     protected $hidden = ['password', 'remember_token'];
 
+<<<<<<< HEAD
     protected $with = ['customerGroup'];
 
      /**
+=======
+    /**
+>>>>>>> 1c274447057da2b16e13a1b849e727667069c5aa
      * Get the customer full name.
      */
     public function getNameAttribute() {
@@ -62,4 +74,35 @@ class Customer extends Authenticatable
     {
         return $this->hasOne(CustomerAddress::class, 'customer_id')->where('default_address', 1);
     }
+<<<<<<< HEAD
+=======
+
+    /**
+     * Customer's relation with wishlist items
+     */
+    public function wishlist_items() {
+        return $this->hasMany(Wishlist::class, 'customer_id');
+    }
+
+    /**
+     * get all cart inactive cart instance of a customer
+     */
+    public function all_carts() {
+        return $this->hasMany(Cart::class, 'customer_id');
+    }
+
+    /**
+     * get inactive cart inactive cart instance of a customer
+     */
+    public function inactive_carts() {
+        return $this->hasMany(Cart::class, 'customer_id')->where('is_active', 0);
+    }
+
+    /**
+     * get active cart inactive cart instance of a customer
+     */
+    public function active_carts() {
+        return $this->hasMany(Cart::class, 'customer_id')->where('is_active', 1);
+    }
+>>>>>>> 1c274447057da2b16e13a1b849e727667069c5aa
 }

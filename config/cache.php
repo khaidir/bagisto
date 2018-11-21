@@ -69,8 +69,25 @@ return [
         ],
 
         'redis' => [
+<<<<<<< HEAD
             'driver' => 'redis',
             'connection' => 'default',
+=======
+
+            'client' => 'predis',
+
+            'clusters' => [
+                'default' => [
+                    [
+                        'host' => env('REDIS_HOST', 'localhost'),
+                        'password' => env('REDIS_PASSWORD', null),
+                        'port' => env('REDIS_PORT', 6379),
+                        'database' => 0,
+                    ],
+                ],
+            ],
+
+>>>>>>> 1c274447057da2b16e13a1b849e727667069c5aa
         ],
 
     ],

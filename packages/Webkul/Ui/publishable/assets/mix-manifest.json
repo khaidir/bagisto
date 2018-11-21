@@ -1,4 +1,9 @@
 {
+<<<<<<< HEAD
     "/js/ui.js": "/js/ui.js?id=b25a07d206dd0b89048f",
     "/css/ui.css": "/css/ui.css?id=856413ffffbe95f7b91d"
+=======
+    "/js/ui.js": "/js/ui.js",
+    "/css/ui.css": "/css/ui.css"
+>>>>>>> 1c274447057da2b16e13a1b849e727667069c5aa
 }

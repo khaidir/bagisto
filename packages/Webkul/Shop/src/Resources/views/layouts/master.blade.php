@@ -62,6 +62,12 @@
         @elseif($error = session('error'))
             window.flashMessages = [{'type': 'alert-error', 'message': "{{ $error }}" }
             ];
+<<<<<<< HEAD
+=======
+        @elseif($info = session('info'))
+            window.flashMessages = [{'type': 'alert-info', 'message': "{{ $info }}" }
+            ];
+>>>>>>> 1c274447057da2b16e13a1b849e727667069c5aa
         @endif
 
         window.serverErrors = [];

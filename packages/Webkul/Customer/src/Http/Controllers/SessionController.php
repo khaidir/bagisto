@@ -26,7 +26,10 @@ class SessionController extends Controller
 
     public function __construct()
     {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1c274447057da2b16e13a1b849e727667069c5aa
         $this->middleware('customer')->except(['show','create']);
         $this->_config = request('_config');
 
