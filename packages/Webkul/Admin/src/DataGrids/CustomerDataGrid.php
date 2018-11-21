@@ -5,14 +5,12 @@ namespace Webkul\Admin\DataGrids;
 use Illuminate\View\View;
 use Webkul\Ui\DataGrid\Facades\DataGrid;
 
-
 /**
  * Customer DataGrid
  *
  * @author    Rahul Shukla <rahulshukla.symfony517@webkul.com> @rahul-webkul
  * @copyright 2018 Webkul Software Pvt Ltd (http://www.webkul.com)
  */
-
 class CustomerDataGrid
 {
     /**
@@ -89,6 +87,7 @@ class CustomerDataGrid
                     'sortable' => false,
                 ],
                 [
+<<<<<<< HEAD
                     'name' => 'cus.phone',
                     'alias' => 'Phone',
                     'type' => 'number',
@@ -100,6 +99,12 @@ class CustomerDataGrid
                     'alias' => 'CustomerGroupName',
                     'type' => 'string',
                     'label' => 'Group Name',
+=======
+                    'name' => 'customer_group_id',
+                    'alias' => 'CustomerGroupId',
+                    'type' => 'number',
+                    'label' => 'Group ID',
+>>>>>>> 092bafd05f38a09af3371f9a28036c9b763a7855
                     'sortable' => false,
                 ],
             ],

@@ -10,7 +10,6 @@ use Webkul\Sales\Models\Order;
 use Webkul\Customer\Models\Wishlist;
 use Webkul\Customer\Notifications\CustomerResetPassword;
 
-
 class Customer extends Authenticatable
 {
     use Notifiable;
@@ -21,7 +20,7 @@ class Customer extends Authenticatable
 
     protected $hidden = ['password', 'remember_token'];
 
-     /**
+    /**
      * Get the customer full name.
      */
     public function getNameAttribute() {
@@ -73,7 +72,7 @@ class Customer extends Authenticatable
     /**
      * get all cart inactive cart instance of a customer
      */
-    public function carts() {
+    public function all_carts() {
         return $this->hasMany(Cart::class, 'customer_id');
     }
 
