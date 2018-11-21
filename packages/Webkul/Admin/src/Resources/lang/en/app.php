@@ -293,7 +293,6 @@ return [
             'image' => 'Image',
         ]
     ],
-
     'configuration' => [
         'tax-categories' => [
             'title' => 'Tax Categories',
@@ -333,8 +332,23 @@ return [
             'zip_code' => 'Zip Code',
             'is_zip' => 'Enable Zip Range',
         ],
-    ],
 
+        'api-client' => [
+            'title' => 'Clients',
+            'add-btn-title' => 'Add Client',
+            'add-title' => 'Add Client',
+            'edit-title' => 'Edit Client',
+            'save-btn-title' => 'Save Client',
+            'name' => 'Name',
+            'redirect' => 'Redirect URL',
+            'client_id' => 'Client Id',
+            'client_secret' => 'Client Secret',
+            'grant_type' => 'Allowed Grant Type',
+            'auth_code' => 'authorization_code',
+            'password' => 'password',
+            'refresh_token' => 'refresh_token'
+        ],
+    ],
     'settings' => [
         'locales' => [
             'title' => 'Locales',

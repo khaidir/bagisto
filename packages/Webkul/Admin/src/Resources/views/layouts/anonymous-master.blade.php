@@ -71,7 +71,7 @@
             <flash-wrapper ref='flashes'></flash-wrapper>
 
             <div class="center-box">
-            
+
                 <div class="adjacent-center">
 
                     <div class="brand-logo">
@@ -102,16 +102,18 @@
                 window.flashMessages = [{'type': 'alert-error', 'message': "{{ $error }}" }];
             @endif
 
-            window.serverErrors = [];
-            @if (count($errors))
-                window.serverErrors = @json($errors->getMessages());
-            @endif
+            {{--  window.serverErrors = [];
+            @if(isset($errors))
+                @if (count($errors))
+                    window.serverErrors = @json($errors->getMessages());
+                @endif
+            @endif  --}}
         </script>
 
         <script type="text/javascript" src="{{ asset('vendor/webkul/admin/assets/js/admin.js') }}"></script>
         <script type="text/javascript" src="{{ asset('vendor/webkul/ui/assets/js/ui.js') }}"></script>
 
         @yield('javascript')
-        
+
     </body>
 </html>
