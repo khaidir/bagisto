@@ -56,7 +56,9 @@
                 <div class="heading mt-10">
                     <span> {{ __('shop::app.reviews.rating-reviews') }} </span>
 
-                    <a href="{{ route('shop.reviews.create', $product->url_key) }}" class="btn btn-lg btn-primary right">Write Review</a>
+                    @auth('customer')
+                        <a href="{{ route('shop.reviews.create', $product->url_key) }}" class="btn btn-lg btn-primary right"> {{ __('shop::app.reviews.write-review') }}  </a>
+                    @endauth
                 </div>
 
                 <div class="ratings-reviews mt-35">
@@ -85,7 +87,7 @@
                         @foreach($reviewHelper->getPercentageRating($product) as $key=>$count)
                         <div class="rater 5star">
                             <div class="rate-number" id={{$key}}star></div>
-                            <div class="star-name">Star</div>
+                            <div class="star-name"> {{ __('shop::app.reviews.star') }} </div>
                             <div class="line-bar">
                                 <div class="line-value" id="{{ $key }}"></div>
                             </div>
@@ -93,7 +95,6 @@
                                 <span> {{$count}}% </span>
                             </div>
                         </div>
-
                         <br/>
                         @endforeach
                     </div>
@@ -110,10 +111,8 @@
                                 </div>
 
                                 <span class="stars">
-                                    @for ($i = 1; $i <= $review->rating; $i++)
-
+                                    @for ($i=1; $i<=$review->rating; $i++)
                                         <span class="icon star-icon"></span>
-
                                     @endfor
                                 </span>
 

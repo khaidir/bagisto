@@ -281,14 +281,6 @@ input {
 
         .media {
             height: 125px;
-<<<<<<< HEAD
-            width: 125px;
-        }
-
-        .info {
-            display: block;
-            margin-left: 20px;
-=======
             width: 110px;
         }
 
@@ -297,7 +289,6 @@ input {
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
->>>>>>> 1c274447057da2b16e13a1b849e727667069c5aa
 
             .stars .icon {
                 height: 16px;
@@ -310,11 +301,7 @@ input {
         height: 120px;
         display: flex;
         flex-direction: column;
-<<<<<<< HEAD
-        justify-content: flex-start;
-=======
         justify-content: space-between;
->>>>>>> 1c274447057da2b16e13a1b849e727667069c5aa
         align-items: center;
 
         a {
@@ -360,10 +347,7 @@ input {
         grid-auto-rows: auto;
         grid-column-gap: 48px;
         grid-row-gap: 15px;
-<<<<<<< HEAD
-=======
         justify-items: end;
->>>>>>> 1c274447057da2b16e13a1b849e727667069c5aa
     }
 
     .product-grid-3 {
@@ -371,10 +355,7 @@ input {
         grid-template-columns: repeat(auto-fill, minmax(235px, 1fr));
         grid-gap: 27px;
         grid-auto-rows: auto;
-<<<<<<< HEAD
-=======
         justify-items: center;
->>>>>>> 1c274447057da2b16e13a1b849e727667069c5aa
     }
 
     .product-card {
@@ -425,10 +406,7 @@ input {
                 margin-right: 10px;
                 text-transform: uppercase;
                 text-align: left;
-<<<<<<< HEAD
-=======
                 box-shadow: 1px 1px 0px #ccc;
->>>>>>> 1c274447057da2b16e13a1b849e727667069c5aa
             }
 
             .add-to-wishlist {
@@ -449,10 +427,7 @@ input {
             padding: 4px 13px;
             font-size: 14px;
             color: #fff;
-<<<<<<< HEAD
-=======
             box-shadow: 1px 1px 1px #cccccc;
->>>>>>> 1c274447057da2b16e13a1b849e727667069c5aa
 
             &.sale {
                 background: #FF6472;
@@ -464,13 +439,10 @@ input {
         }
     }
 
-<<<<<<< HEAD
-=======
     .product-card:hover {
         box-shadow: 1px 1px 10px #ccc;
     }
 
->>>>>>> 1c274447057da2b16e13a1b849e727667069c5aa
     @media only screen and (max-width: 580px) {
         .main-container-wrapper {
             padding: 0px;
@@ -518,13 +490,9 @@ input {
 
         .product-card {
             width: 100%;
-<<<<<<< HEAD
-            display: inline-block;
-=======
             display: flex;
             flex-direction: row;
             align-items: center;
->>>>>>> 1c274447057da2b16e13a1b849e727667069c5aa
             margin-bottom: 20px;
 
             .product-image {
@@ -1999,15 +1967,12 @@ section.cart {
                 a.link {
                     margin-right: 15px;
                 }
-<<<<<<< HEAD
-=======
 
                 div {
                     button {
                         margin-right: 15px;
                     }
                 }
->>>>>>> 1c274447057da2b16e13a1b849e727667069c5aa
             }
         }
 
@@ -2034,20 +1999,14 @@ section.cart {
         .item-image {
             height: 160px;
             width: 160px;
-<<<<<<< HEAD
-=======
             box-shadow: 1px 1px 1px $border-color;
->>>>>>> 1c274447057da2b16e13a1b849e727667069c5aa
         }
 
         .item-details {
             display: flex;
             flex-direction: column;
-<<<<<<< HEAD
-=======
             justify-content: space-between;
             width: 100%;
->>>>>>> 1c274447057da2b16e13a1b849e727667069c5aa
 
             .item-title {
                 font-size: 18px;
@@ -2070,40 +2029,6 @@ section.cart {
             }
 
             .misc {
-<<<<<<< HEAD
-                display: inline-flex;
-                align-items: center;
-                justify-content: flex-start;
-
-                div.qty-text {
-                    color: $font-color-light;
-                    margin-right: 10px;
-                }
-
-                input.box {
-                    height: 38px;
-                    width: 60px;
-                    font-size: 16px;
-                    text-align: center;
-                    line-height: 38px;
-                    border: 1px solid $border-color;
-                    border-radius: 3px;
-                    margin-right: 30px;
-                    border-radius: 0px;
-                }
-
-                .remove {
-                    color: $brand-color;
-                    margin-right: 30px;
-                }
-
-                .towishlist {
-                    color : $brand-color;
-                }
-
-            }
-        }
-=======
                 display: flex;
                 width: 100%;
                 flex-direction: row;
@@ -2143,7 +2068,6 @@ section.cart {
         .error-message {
             color: $disc-price;
         }
->>>>>>> 1c274447057da2b16e13a1b849e727667069c5aa
     }
 }
 
@@ -2941,10 +2865,6 @@ section.review {
         width: 100%;
 
         .account-head {
-<<<<<<< HEAD
-            margin-bottom: 20px;
-=======
->>>>>>> 1c274447057da2b16e13a1b849e727667069c5aa
 
             .back-icon {
                 display: none;
@@ -2987,11 +2907,7 @@ section.review {
 
 .address-card-1 {
     width: 260px;
-<<<<<<< HEAD
-    border: 1px solid #E8E8E8;
-=======
     border: 1px solid $border-color;
->>>>>>> 1c274447057da2b16e13a1b849e727667069c5aa
     display: flex;
     position: relative;
     flex-direction: row;
@@ -3338,4 +3254,3 @@ section.review {
         margin-top: -24px;
     }
 }
-

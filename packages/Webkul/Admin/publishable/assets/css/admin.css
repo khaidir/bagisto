@@ -437,6 +437,17 @@
   border-bottom: 1px solid rgba(162, 162, 162, 0.2);
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+.icon.star {
+  height: 16px !important;
+  width: 16px !important;
+}
+
+=======
+>>>>>>> 8c12e35621ac9533ba9c7a89a1bbbab6e7c19fa4
+>>>>>>> 1b651eca45986bef8e5b68b3e6479da55b8c4254
 .rtl {
   direction: rtl;
 }
@@ -519,6 +530,19 @@
 }
 
 .rtl .dashboard .graph-stats .left-card-container {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  padding-right: 0px;
+  padding-left: 9px;
+  float: right;
+}
+
+.rtl .dashboard .graph-stats .right-card-container {
+  padding-left: 0px;
+  padding-right: 21px;
+=======
+>>>>>>> 1b651eca45986bef8e5b68b3e6479da55b8c4254
   float: right;
   padding-right: 0px;
 }
@@ -527,6 +551,10 @@
   float: right;
   padding-left: 0px;
   padding-right: 30px;
+<<<<<<< HEAD
+=======
+>>>>>>> 8c12e35621ac9533ba9c7a89a1bbbab6e7c19fa4
+>>>>>>> 1b651eca45986bef8e5b68b3e6479da55b8c4254
 }
 
 .rtl .sale-container .sale-summary {
@@ -571,20 +599,43 @@
   margin-right: 0px;
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 1b651eca45986bef8e5b68b3e6479da55b8c4254
 .rtl .table table {
   text-align: right;
 }
 
+<<<<<<< HEAD
+=======
+>>>>>>> 8c12e35621ac9533ba9c7a89a1bbbab6e7c19fa4
+>>>>>>> 1b651eca45986bef8e5b68b3e6479da55b8c4254
 .rtl .dropdown-list.bottom-right {
   left: 0px;
   right: auto;
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+.rtl .dropdown-list .dropdown-container, .rtl .table table {
+  text-align: right;
+}
+
+.rtl .accordian .accordian-header .icon, .rtl .control-group label .locale {
+=======
+>>>>>>> 1b651eca45986bef8e5b68b3e6479da55b8c4254
 .rtl .dropdown-list .dropdown-container {
   text-align: right;
 }
 
 .rtl .accordian .accordian-header .icon {
+<<<<<<< HEAD
+=======
+>>>>>>> 8c12e35621ac9533ba9c7a89a1bbbab6e7c19fa4
+>>>>>>> 1b651eca45986bef8e5b68b3e6479da55b8c4254
   float: left;
 }
 
@@ -614,6 +665,11 @@
   margin-right: 0px;
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 1b651eca45986bef8e5b68b3e6479da55b8c4254
 .rtl .control-group label.required::before {
   content: "*";
   color: #FC6868;
@@ -628,6 +684,10 @@
   float: left;
 }
 
+<<<<<<< HEAD
+=======
+>>>>>>> 8c12e35621ac9533ba9c7a89a1bbbab6e7c19fa4
+>>>>>>> 1b651eca45986bef8e5b68b3e6479da55b8c4254
 .rtl .control-group.date::after {
   margin-top: 15px;
   position: absolute;
@@ -638,4 +698,23 @@
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
+<<<<<<< HEAD
 >>>>>>> 1c274447057da2b16e13a1b849e727667069c5aa
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+.rtl .checkbox .checkbox-view {
+  margin-right: 0px;
+  margin-left: 5px;
+}
+
+.rtl .checkbox input {
+  right: 0;
+  left: auto;
+}
+=======
+>>>>>>> 8c12e35621ac9533ba9c7a89a1bbbab6e7c19fa4
+>>>>>>> 1b651eca45986bef8e5b68b3e6479da55b8c4254
+>>>>>>> beccf6bc00f2ce5f0ef005155263979f0c8c066b

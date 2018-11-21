@@ -5,20 +5,12 @@ namespace Webkul\Admin\DataGrids;
 use Illuminate\View\View;
 use Webkul\Ui\DataGrid\Facades\DataGrid;
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 1c274447057da2b16e13a1b849e727667069c5aa
 /**
  * Customer DataGrid
  *
  * @author    Rahul Shukla <rahulshukla.symfony517@webkul.com> @rahul-webkul
  * @copyright 2018 Webkul Software Pvt Ltd (http://www.webkul.com)
  */
-<<<<<<< HEAD
-
-=======
->>>>>>> 1c274447057da2b16e13a1b849e727667069c5aa
 class CustomerDataGrid
 {
     /**
@@ -33,8 +25,8 @@ class CustomerDataGrid
 
             return DataGrid::make([
             'name' => 'Customer',
-            'table' => 'customers',
-            'select' => 'id',
+            'table' => 'customers as cus',
+            'select' => 'cus.id',
             'perpage' => 10,
             'aliased' => true, //use this with false as default and true in case of joins
 
@@ -62,45 +54,46 @@ class CustomerDataGrid
             ],
 
             'join' => [
-
+                [
+                    'join' => 'leftjoin',
+                    'table' => 'customer_groups as cg',
+                    'primaryKey' => 'cus.customer_group_id',
+                    'condition' => '=',
+                    'secondaryKey' => 'cg.id',
+                ]
             ],
 
             //use aliasing on secodary columns if join is performed
             'columns' => [
                 [
-                    'name' => 'id',
+                    'name' => 'cus.id',
                     'alias' => 'ID',
                     'type' => 'number',
                     'label' => 'ID',
                     'sortable' => true,
                 ],
                 [
-                    'name' => 'first_name',
+                    'name' => 'cus.first_name',
                     'alias' => 'FirstName',
                     'type' => 'string',
                     'label' => 'First Name',
                     'sortable' => false,
                 ],
                 [
-                    'name' => 'email',
+                    'name' => 'cus.email',
                     'alias' => 'Email',
                     'type' => 'string',
                     'label' => 'Email',
                     'sortable' => false,
                 ],
                 [
-<<<<<<< HEAD
-                    'name' => 'phone',
-                    'alias' => 'Phone',
-                    'type' => 'number',
-                    'label' => 'Phone',
-                    'sortable' => true,
-                ],
-                [
-=======
->>>>>>> 1c274447057da2b16e13a1b849e727667069c5aa
-                    'name' => 'customer_group_id',
-                    'alias' => 'CustomerGroupId',
+                    'name' => 'cus.name',
+                    'alias' => 'CustomerGroupName',
+                    'type' => 'string',
+                    'label' => 'Group Name',
+                ], [
+                    'name' => 'cus.customer_group_id',
+                    'alias' => 'cgid',
                     'type' => 'number',
                     'label' => 'Group ID',
                     'sortable' => false,
@@ -108,20 +101,24 @@ class CustomerDataGrid
             ],
 
             //don't use aliasing in case of filters
-
             'filterable' => [
-
                 [
-                    'column' => 'id',
+                    'column' => 'cus.id',
                     'alias' => 'ID',
                     'type' => 'number',
                     'label' => 'ID',
                 ],
                 [
-                    'column' => 'first_name',
+                    'column' => 'cus.first_name',
                     'alias' => 'FirstName',
                     'type' => 'string',
                     'label' => 'First Name',
+                ],
+                [
+                    'column' => 'cg.name',
+                    'alias' => 'CustomerGroupName',
+                    'type' => 'string',
+                    'label' => 'Group Name',
                 ]
             ],
 
@@ -160,8 +157,6 @@ class CustomerDataGrid
 
     public function render()
     {
-
         return $this->createCustomerDataGrid()->render();
-
     }
 }

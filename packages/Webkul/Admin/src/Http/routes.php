@@ -551,6 +551,27 @@ Route::group(['middleware' => ['web']], function () {
 
             Route::get('/tax-rates/delete/{id}', 'Webkul\Tax\Http\Controllers\TaxRateController@destroy')->name('admin.tax-rates.delete');
             //tax rate ends
+
+            //Api clients routes
+            Route::get('/api-client', 'Webkul\Api\Http\Controllers\Admin\ApiClientController@index')->defaults('_config', [
+                'view' => 'admin::api-client.index'
+            ])->name('admin.api-client');
+
+            Route::get('/api-client/create', 'Webkul\Api\Http\Controllers\Admin\ApiClientController@create')->defaults('_config', [
+                'view' => 'admin::api-client.create'
+            ])->name('admin.api-client.create');
+
+            Route::post('/api-client/create', 'Webkul\Api\Http\Controllers\Admin\ApiClientController@store')->defaults('_config', [
+                'redirect' => 'admin.api-client'
+            ])->name('admin.api-client.store');
+
+            Route::get('/api-client/edit/{id}', 'Webkul\Api\Http\Controllers\Admin\ApiClientController@edit')->defaults('_config', [
+                'view' => 'admin::api-client.edit'
+            ])->name('admin.api-client.edit');
+
+            Route::put('/api-client/edit/{id}', 'Webkul\Api\Http\Controllers\Admin\ApiClientController@update')->defaults('_config', [
+                'redirect' => 'admin.api-client'
+            ])->name('admin.api-client.update');
         });
     });
 });

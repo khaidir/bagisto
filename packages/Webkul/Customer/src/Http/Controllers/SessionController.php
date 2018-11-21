@@ -60,6 +60,7 @@ class SessionController extends Controller
             return back();
         }
 
+
         //Event passed to prepare cart after login
         Event::fire('customer.after.login', $request->input('email'));
 

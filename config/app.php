@@ -140,18 +140,10 @@ return [
     | this array to grant expanded functionality to your applications.
     |
     */
-<<<<<<< HEAD
-    /*
-        Code Editor
-
-    */
-
-=======
 
     /*
         Code Editor
     */
->>>>>>> 1c274447057da2b16e13a1b849e727667069c5aa
     'editor' =>'vscode',
 
 
@@ -223,15 +215,8 @@ return [
         Webkul\Checkout\Providers\CheckoutServiceProvider::class,
         Webkul\Shipping\Providers\ShippingServiceProvider::class,
         Webkul\Payment\Providers\PaymentServiceProvider::class,
-<<<<<<< HEAD
         Webkul\Sales\Providers\SalesServiceProvider::class,
         Webkul\Tax\Providers\TaxServiceProvider::class,
-=======
-        Webkul\Paypal\Providers\PaypalServiceProvider::class,
-        Webkul\Sales\Providers\SalesServiceProvider::class,
-        Webkul\Tax\Providers\TaxServiceProvider::class,
-        Webkul\API\Providers\APIServiceProvider::class,
->>>>>>> 1c274447057da2b16e13a1b849e727667069c5aa
     ],
 
     /*
@@ -286,10 +271,6 @@ return [
         'Cart' => Webkul\Checkout\Facades\Cart::class,
         'Core' => Webkul\Core\Facades\Core::class,
         'DbView' => Flynsarmy\DbBladeCompiler\Facades\DbView::class,
-<<<<<<< HEAD
         'PDF' => Barryvdh\DomPDF\Facade::class
-=======
-        'PDF' => Barryvdh\DomPDF\Facade::class,
->>>>>>> 1c274447057da2b16e13a1b849e727667069c5aa
     ],
 ];

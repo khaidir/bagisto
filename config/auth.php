@@ -13,12 +13,17 @@ return [
         ],
 
         'api' => [
+<<<<<<< HEAD
             'driver' => 'token',
 <<<<<<< HEAD
             'provider' => 'admins',
 =======
             'provider' => 'customers',
 >>>>>>> 1c274447057da2b16e13a1b849e727667069c5aa
+=======
+            'driver' => 'passport',
+            'provider' => 'admins',
+>>>>>>> beccf6bc00f2ce5f0ef005155263979f0c8c066b
         ],
 
         'customer' =>[

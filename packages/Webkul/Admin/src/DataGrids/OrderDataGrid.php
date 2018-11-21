@@ -32,21 +32,12 @@ class OrderDataGrid
             //True in case of joins else aliasing key required on all cases
 
             'massoperations' =>[
-<<<<<<< HEAD
-                [
-                    'route' => route('admin.datagrid.delete'),
-                    'method' => 'DELETE',
-                    'label' => 'Delete',
-                    'type' => 'button',
-                ],
-=======
                 // [
                 //     'route' => route('admin.datagrid.delete'),
                 //     'method' => 'DELETE',
                 //     'label' => 'Delete',
                 //     'type' => 'button',
                 // ],
->>>>>>> 1c274447057da2b16e13a1b849e727667069c5aa
             ],
 
             'actions' => [
@@ -56,21 +47,12 @@ class OrderDataGrid
                     'confirm_text' => 'Do you really want to do this?',
                     'icon' => 'icon pencil-lg-icon',
                 ],
-<<<<<<< HEAD
-                [
-                    'type' => 'Delete',
-                    'route' => route('admin.datagrid.delete'),
-                    'confirm_text' => 'Do you really want to do this?',
-                    'icon' => 'icon trash-icon',
-                ],
-=======
                 // [
                 //     'type' => 'Delete',
                 //     'route' => route('admin.datagrid.delete'),
                 //     'confirm_text' => 'Do you really want to do this?',
                 //     'icon' => 'icon trash-icon',
                 // ],
->>>>>>> 1c274447057da2b16e13a1b849e727667069c5aa
             ],
 
             'join' => [],
@@ -131,13 +113,10 @@ class OrderDataGrid
                             return '<span class="badge badge-md badge-info">Closed</span>';
                         else if($value == "pending")
                             return '<span class="badge badge-md badge-warning">Pending</span>';
-<<<<<<< HEAD
-=======
                         else if($value == "pending_payment")
                             return '<span class="badge badge-md badge-warning">Pending Payment</span>';
                         else if($value == "fraud")
                             return '<span class="badge badge-md badge-danger">Fraud</span>';
->>>>>>> 1c274447057da2b16e13a1b849e727667069c5aa
                     },
                 ],
             ],

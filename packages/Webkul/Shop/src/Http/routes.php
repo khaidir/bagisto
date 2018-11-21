@@ -14,7 +14,7 @@ Route::group(['middleware' => ['web', 'theme', 'locale', 'currency']], function 
     Route::get('/subscribe', 'Webkul\Shop\Http\Controllers\SubscriptionController@subscribe')->name('shop.subscribe');
 
     //unsubscribe
-    Route::get('/unsubscribe', 'Webkul\Shop\Http\Controllers\SubscriptionController@unSubscribe')->name('shop.unsubscribe');
+    Route::get('/unsubscribe/{token}', 'Webkul\Shop\Http\Controllers\SubscriptionController@unSubscribe')->name('shop.unsubscribe');
 
 >>>>>>> 1c274447057da2b16e13a1b849e727667069c5aa
     //Store front header nav-menu fetch
@@ -153,8 +153,11 @@ Route::group(['middleware' => ['web', 'theme', 'locale', 'currency']], function 
 
         //registration form store
         Route::post('register', 'Webkul\Customer\Http\Controllers\RegistrationController@create')->defaults('_config', [
-            'redirect' => 'customer.account.index',
+            'redirect' => 'customer.profile.index',
         ])->name('customer.register.create');
+
+        //verify account
+        Route::get('/verify-account/{email}', 'Webkul\Customer\Http\Controllers\RegistrationController@verifyAccount')->name('customer.verify');
 
         // Auth Routes
         Route::group(['middleware' => ['customer']], function () {

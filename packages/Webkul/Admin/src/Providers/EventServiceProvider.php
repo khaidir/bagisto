@@ -126,6 +126,12 @@ class EventServiceProvider extends ServiceProvider
             'sort' => 1,
             'icon-class' => '',
         ], [
+            'key' => 'configuration.api-client',
+            'name' => 'Api Client',
+            'route' => 'admin.api-client',
+            'sort' => 2,
+            'icon-class' => '',
+        ], [
             'key' => 'settings',
             'name' => 'Settings',
             'route' => 'admin.locales.index',
