@@ -54,11 +54,12 @@
                 <div class="form-container">
                     @csrf()
 
-                    @foreach (config('core.carriers') as $method => $carrier)
+                    @foreach (config('core.paymentmethods') as $method => $paymentmethod)
 
-                        <accordian :title="'{{ __(config('carriers.' . $method . '.title')) }}'" :active="true">
+                        <accordian :title="'{{ __(config('paymentmethods.' . $method . '.title')) }}'" :active="true">
+
                             <div slot="body">
-                                @foreach ($carrier as $field)
+                                @foreach ($paymentmethod as $field)
 
                                     <?php
                                         $validations = [];
@@ -76,7 +77,7 @@
                                     @if (view()->exists($typeView = 'admin::configuration.common.field-types.' . $field['type']))
 
                                         <?php
-                                            $name = 'carriers' . '.' . $method . '.' . $field['name'];
+                                            $name = 'paymentmethods' . '.' . $method . '.' . $field['name'];
 
                                             $channel_locale = [];
 

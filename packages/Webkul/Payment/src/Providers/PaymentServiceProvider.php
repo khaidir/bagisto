@@ -19,7 +19,7 @@ class PaymentServiceProvider extends ServiceProvider
     {
         include __DIR__ . '/../Http/helpers.php';
     }
-    
+
     /**
      * Register services.
      *
@@ -29,9 +29,7 @@ class PaymentServiceProvider extends ServiceProvider
     {
         $this->registerFacades();
 
-        $this->mergeConfigFrom(
-            dirname(__DIR__) . '/Config/paymentmethods.php', 'paymentmethods'
-        );
+        $this->registerConfig();
     }
     /**
      * Register Bouncer as a singleton.
@@ -47,4 +45,21 @@ class PaymentServiceProvider extends ServiceProvider
             return new Payment();
         });
     }
+
+     /**
+     * Register package config.
+     *
+     * @return void
+     */
+    protected function registerConfig()
+    {
+        $this->mergeConfigFrom(
+            dirname(__DIR__) . '/Config/paymentmethods.php', 'paymentmethods'
+        );
+
+        $this->mergeConfigFrom(
+            dirname(__DIR__) . '/Config/fields.php', 'core'
+        );
+    }
 }
+

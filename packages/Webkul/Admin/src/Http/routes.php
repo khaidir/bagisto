@@ -79,6 +79,15 @@ Route::group(['middleware' => ['web']], function () {
                 'redirect' => 'admin.configuration.sales.shipping_methods'
             ])->name('admin.configuration.sales.shipping_methods.store');
 
+            //Payment Methods Routes
+            Route::get('configuration/sales/payment-methods', 'Webkul\Admin\Http\Controllers\ConfigurationController@index')->defaults('_config', [
+                'view' => 'admin::configuration.sales.payment-method'
+            ])->name('admin.configuration.sales.payment_methods');
+
+            Route::post('configuration/sales/payment-methods', 'Webkul\Admin\Http\Controllers\ConfigurationController@store')->defaults('_config', [
+                'redirect' => 'admin.configuration.sales.shipping_methods'
+            ])->name('admin.configuration.sales.payment_methods.store');
+
 
             // Reviews Routes
             Route::get('reviews/edit/{id}', 'Webkul\Product\Http\Controllers\ReviewController@edit')->defaults('_config',[

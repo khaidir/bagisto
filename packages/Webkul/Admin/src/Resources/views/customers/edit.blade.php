@@ -53,8 +53,8 @@
                             <div class="control-group">
                                 <label for="gender" class="required">{{ __('admin::app.customers.customers.gender') }}</label>
                                 <select name="gender" class="control" v-validate="'gender'" value="{{ $customer->gender }}" v-validate="'required'" data-vv-as="&quot;{{ __('shop::app.customers.customers.gender') }}&quot;">
-                                        <option value="Male">Male</option>
-                                        <option value="Female">Female</option>
+                                    <option value="Male" {{ $customer->gender == "Male" ? 'selected' : '' }}>Male</option>
+                                    <option value="Female" {{ $customer->gender == "Female" ? 'selected' : '' }}>Female</option>
                                 </select>
                                 <span class="control-error" v-if="errors.has('gender')">@{{ errors.first('gender') }}</span>
                             </div>
@@ -88,7 +88,7 @@
                                 @if(!is_null($customer->channel_id))
                                     <?php $selectedChannelOption = $customer->channel_id ?>
                                 @else
-                                    <?php $selectedChannelOption = $customer->channel_id ?>
+                                    <?php $selectedChannelOption = '' ?>
                                 @endif
 
                                 <select  class="control" name="channel_id" v-validate="'required'" data-vv-as="&quot;{{ __('shop::app.customers.customers.channel_name') }}&quot;">

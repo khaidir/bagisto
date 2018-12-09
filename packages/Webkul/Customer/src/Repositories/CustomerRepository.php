@@ -43,7 +43,7 @@ class CustomerRepository extends Repository
      * @return mixed
      */
 
-    public function update(array $data, $id, $attribute = "id")
+    public function update(array $data, $id)
     {
         $customer = $this->find($id);
 

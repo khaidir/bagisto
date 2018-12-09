@@ -127,8 +127,13 @@ class EventServiceProvider extends ServiceProvider
             'route' => 'admin.configuration.sales.shipping_methods',
             'sort' => 1,
             'icon-class' => '',
-        ],
-        [
+        ], [
+            'key' => 'configuration.sales.payment_method',
+            'name' => 'Payment Methods',
+            'route' => 'admin.configuration.sales.payment_methods',
+            'sort' => 2,
+            'icon-class' => '',
+        ], [
             'key' => 'settings',
             'name' => 'Settings',
             'route' => 'admin.locales.index',
