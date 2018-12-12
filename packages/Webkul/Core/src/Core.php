@@ -490,10 +490,23 @@ class Core
             $locale = request()->get('locale') ?: app()->getLocale();
         }
 
+        $fields = $this->getField($field);
+
+        $channel_based = false;
+        $locale_based = false;
+
+        if(isset($fields['channel_based']) && $fields['channel_based']) {
+            $channel_based = true;
+        }
+
+        if(isset($fields['locale_based']) && $fields['locale_based']) {
+            $locale_based = true;
+        }
+
         $coreConfigValue = $this->coreConfigRepository->findOneWhere([
             'code' => $field,
-            'channel_code' => $channel,
-            'locale_code' => $locale
+            'channel_code' => $channel_based ? $channel : null,
+            'locale_code' => $locale_based ? $locale : null
         ]);
 
         if(!$coreConfigValue)
@@ -608,6 +621,26 @@ class Core
             $end = (date('D', $ts) == 'Sat') ? $ts : strtotime('next saturday', $ts);
 
             return date('Y-m-d', $end);
+        }
+    }
+
+    /**
+     * @param string $key
+     * @return array
+     */
+    public function getField($key) {
+
+        foreach (config('core') as $coreField => $coreData) {
+            foreach ($coreData as $methodField => $methodData) {
+                foreach ($methodData as $field) {
+
+                    $fieldName = $coreField . '.' . $methodField . '.' . $field['name'];
+
+                    if ($key == $fieldName) {
+                        return $field;
+                    }
+                }
+            }
         }
     }
 }

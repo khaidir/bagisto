@@ -133,7 +133,7 @@
                 $('#channel-switcher').val()
                 var query = '?channel=' + $('#channel-switcher').val() + '&locale=' + $('#locale-switcher').val();
 
-                window.location.href = "{{ route('admin.configuration.sales.shipping_methods')  }}" + query;
+                window.location.href = "{{ route('admin.configuration.sales.payment_methods')  }}" + query;
             })
         });
     </script>
