@@ -15,7 +15,7 @@
 
                 <div class="page-title">
                     <h1>
-                        {{ __('admin::app.configuration.sales.shipping-method.title') }}
+                        {{ __('admin::app.configuration.sales.payment-method.title') }}
                     </h1>
 
                     <div class="control-group">
@@ -93,6 +93,8 @@
                                             $value = core()->getConfigData($name);
 
                                             $errorName = $field['name'];
+
+                                            $fieldName = 'paymentmethods';
                                         ?>
 
                                         <div class="control-group {{ $field['type'] }}" :class="[errors.has('{{ $name }}') ? 'has-error' : '']">

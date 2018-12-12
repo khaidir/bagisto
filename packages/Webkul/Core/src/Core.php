@@ -490,26 +490,47 @@ class Core
             $locale = request()->get('locale') ?: app()->getLocale();
         }
 
-        $fields = $this->getField($field);
+        $fields = $this->getConfigField($field);
 
         $channel_based = false;
         $locale_based = false;
 
-        if(isset($fields['channel_based']) && $fields['channel_based']) {
+        if (isset($fields['channel_based']) && $fields['channel_based']) {
             $channel_based = true;
         }
 
-        if(isset($fields['locale_based']) && $fields['locale_based']) {
+        if (isset($fields['locale_based']) && $fields['locale_based']) {
             $locale_based = true;
         }
 
-        $coreConfigValue = $this->coreConfigRepository->findOneWhere([
-            'code' => $field,
-            'channel_code' => $channel_based ? $channel : null,
-            'locale_code' => $locale_based ? $locale : null
-        ]);
+        if (isset($fields['channel_based']) && $fields['channel_based']) {
+            if (isset($fields['locale_based']) && $fields['locale_based']) {
+                $coreConfigValue = $this->coreConfigRepository->findOneWhere([
+                    'code' => $field,
+                    'channel_code' => $channel,
+                    'locale_code' => $locale
+                ]);
+            } else {
+                $coreConfigValue = $this->coreConfigRepository->findOneWhere([
+                    'code' => $field,
+                    'channel_code' => $channel,
+                ]);
+            }
+        } else {
+            if (isset($fields['locale_based']) && $fields['locale_based']) {
+                $coreConfigValue = $this->coreConfigRepository->findOneWhere([
+                    'code' => $field,
+                    'locale_code' => $locale
+                ]);
+            }
+            else {
+                $coreConfigValue = $this->coreConfigRepository->findOneWhere([
+                    'code' => $field,
+                ]);
+            }
+        }
 
-        if(!$coreConfigValue)
+        if (!$coreConfigValue)
             return Config::get($field);
 
         return $coreConfigValue->value;
@@ -628,17 +649,19 @@ class Core
      * @param string $key
      * @return array
      */
-    public function getField($key) {
+    public function getConfigField($field) {
+        $fieldArray = explode(".", $field);
+        array_shift($fieldArray);
+        $field = implode(".", $fieldArray);
 
-        foreach (config('core') as $coreField => $coreData) {
-            foreach ($coreData as $methodField => $methodData) {
-                foreach ($methodData as $field) {
+        $result = array_merge(config('core.carriers'), config('core.paymentmethods'));
 
-                    $fieldName = $coreField . '.' . $methodField . '.' . $field['name'];
+        foreach ($result as $coreField => $coreData) {
+            foreach ($coreData as $fieldData) {
+                $fieldName = $coreField . '.' . $fieldData['name'];
 
-                    if ($key == $fieldName) {
-                        return $field;
-                    }
+                if ($field == $fieldName) {
+                    return $fieldData;
                 }
             }
         }

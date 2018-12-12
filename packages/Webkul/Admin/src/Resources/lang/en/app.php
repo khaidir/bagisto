@@ -354,6 +354,9 @@ return [
                 'description' => 'Description',
                 'active' => 'Active',
                 'status' => 'Status'
+            ],
+            'payment-method' => [
+                'title' => 'Payment Methods'
             ]
         ]
     ],

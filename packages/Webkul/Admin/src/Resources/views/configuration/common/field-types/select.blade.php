@@ -1,4 +1,4 @@
-<select v-validate="'{{$validations}}'" class="control" id="{{ $name }}" name="{{ $name }}" data-vv-as="&quot;{{ $field['name'] }}&quot;">
+<select v-validate="'{{$validations}}'" class="control" id="{{ $name }}" name="{{ $fieldName }}[{{ $method }}][{{ $field['name'] }}]" data-vv-as="&quot;{{ $field['name'] }}&quot;">
 
     @foreach($field['options'] as $option)
 

@@ -92,6 +92,8 @@
                                             $value = core()->getConfigData($name);
 
                                             $errorName = $field['name'];
+
+                                            $fieldName = 'carriers';
                                         ?>
 
                                         <div class="control-group {{ $field['type'] }}" :class="[errors.has('{{ $name }}') ? 'has-error' : '']">
