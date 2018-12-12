@@ -2,7 +2,100 @@
 
 return [
     'paymentmethods' => [
-
+        'cashondelivery' => [
+            [
+                'name' => 'title',
+                'title' => 'Title',
+                'type' => 'text',
+                'validation' => 'required',
+                'channel_based' => false,
+                'locale_based' => true
+            ], [
+                'name' => 'description',
+                'title' => 'Description',
+                'type' => 'textarea',
+                'channel_based' => false,
+                'locale_based' => true
+            ],  [
+                'name' => 'order_status',
+                'title' => 'Order Status',
+                'type' => 'select',
+                'options' => [
+                    [
+                        'title' => 'Pending',
+                        'value' => 'pending'
+                    ], [
+                        'title' => 'Approved',
+                        'value' => 'Approved'
+                    ], [
+                        'title' => 'Pending Payment',
+                        'value' => 'pending_payment'
+                    ]
+                ],
+                'validation' => 'required'
+            ], [
+                'name' => 'active',
+                'title' => 'Status',
+                'type' => 'select',
+                'options' => [
+                    [
+                        'title' => 'Active',
+                        'value' => true
+                    ], [
+                        'title' => 'Inactive',
+                        'value' => false
+                    ]
+                ],
+                'validation' => 'required'
+            ]
+        ],
+        'moneytransfer' => [
+            [
+                'name' => 'title',
+                'title' => 'Title',
+                'type' => 'text',
+                'validation' => 'required',
+                'channel_based' => false,
+                'locale_based' => true
+            ], [
+                'name' => 'description',
+                'title' => 'Description',
+                'type' => 'textarea',
+                'channel_based' => false,
+                'locale_based' => true
+            ],  [
+                'name' => 'order_status',
+                'title' => 'Order Status',
+                'type' => 'select',
+                'options' => [
+                    [
+                        'title' => 'Pending',
+                        'value' => 'pending'
+                    ], [
+                        'title' => 'Approved',
+                        'value' => 'Approved'
+                    ], [
+                        'title' => 'Pending Payment',
+                        'value' => 'pending_payment'
+                    ]
+                ],
+                'validation' => 'required'
+            ], [
+                'name' => 'active',
+                'title' => 'Status',
+                'type' => 'select',
+                'options' => [
+                    [
+                        'title' => 'Active',
+                        'value' => true
+                    ], [
+                        'title' => 'Inactive',
+                        'value' => false
+                    ]
+                ],
+                'validation' => 'required'
+            ]
+        ],
         'paypal_standard' => [
             [
                 'name' => 'title',

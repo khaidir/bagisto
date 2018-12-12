@@ -491,7 +491,9 @@ class Core
         }
 
         $coreConfigValue = $this->coreConfigRepository->findOneWhere([
-            'code' => $field
+            'code' => $field,
+            'channel_code' => $channel,
+            'locale_code' => $locale
         ]);
 
         if(!$coreConfigValue)
